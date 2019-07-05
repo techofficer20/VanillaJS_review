@@ -1,7 +1,6 @@
-/* 모든 instruction은 각기 다른 라인에 위치함.
-한 expression이 끝나면 세미콜론 추가
-변수 선언 전, let을 써야 함. (초기화, 생성 시)
-이미 생성된 것을 사용할 때는 참조만 하면 됨.*/
+/* 상수 선언하려면 let 대신 const 쓰기
+let으로 선언한 뒤 또 선언하면 이미 변수 선언했었다고 알려준다.
+(var는 알려주지 않는다. 즉, var를 쓰지 말고 let을 쓰도록 한다.)*/
 let a = 221;
 let b = a - 5;
-console.log(b);
+console.log(b, a);
