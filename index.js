@@ -1,9 +1,8 @@
 const title = document.querySelector("#title");
-const BASE_COLOR = "rgb(52, 73, 94)";
-const OTHER_COLOR = "#7f8c8d";
+const CLICK_CLASS = "clicked";
 
 function handleClick() {
-  const currentColor = title.style.color;
+  /* const currentColor = title.style.color;
   if (currentColor === BASE_COLOR) {
     // If the color is same as the initial one
     title.style.color = OTHER_COLOR;
@@ -12,11 +11,11 @@ function handleClick() {
     // we make it into the initial one again
     title.style.color = BASE_COLOR;
   }
+  toggle은 이것을 요약.. */
+  title.classList.toggle(CLICK_CLASS);
 }
 
 function init() {
-  title.style.color = BASE_COLOR;
+  title.addEventListener("click", handleClick);
 }
-
-title.addEventListener("click", handleClick);
 init();
